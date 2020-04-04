@@ -1,6 +1,4 @@
-# demo
-
-<H1>Demo Project for the Amazon android application</H1>
+H1>Demo Project for the Amazon android application</H1>
 
 This project has been created to automate the Log In functionality of the Amazon app, followed by the search funcitonality, then adding a product to the cart and verifying it. This app is available on the app store.
 
