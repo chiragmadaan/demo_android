@@ -18,3 +18,14 @@ This will run the desired test case test case and generate the test report
 <b>Page Object Model</b> design has been used to create tests. Every view has its own page class which can be found at /src/test/java/pages. The /src/test/java/tests directory contains a <b>BaseClass</b> which is inherited to all the test classes and is responsible for setting up the test session and ending the test session. <b>PurchaseTest</b> class contains the tests relevant for this task assigned by <b>Telstra</b>. All the method names and variable names are very readable and easy to undertand. For dependency management I have used Maven.
 The Parameters for the tests are passed via the testng XML file. So any change in the test case. data. can be done in the XML file without touching the code.
 All the assertion statements are part of the test case and no assertion is made in the view pages because that's one of the principles of the POM.
+
+
+Appium gestures Swipe and Click are used
+
+Desired test case has been automated
+
+Name of the product is verified on all the relevant pages and made sure it is consistent
+
+Test Case passes and fails based on assertions
+
+Test data is read from the external source and is not part of the test code
