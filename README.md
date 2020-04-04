@@ -20,12 +20,12 @@ The Parameters for the tests are passed via the testng XML file. So any change i
 All the assertion statements are part of the test case and no assertion is made in the view pages because that's one of the principles of the POM.
 
 
-Appium gestures Swipe and Click are used
+&#10003;Appium gestures Swipe and Click are used
 
-Desired test case has been automated
+&#10003;Desired test case has been automated
 
-Name of the product is verified on all the relevant pages and made sure it is consistent
+&#10003;Name of the product is verified on all the relevant pages and made sure it is consistent
 
-Test Case passes and fails based on assertions
+&#10003;Test Case passes and fails based on assertions
 
-Test data is read from the external source and is not part of the test code
+&#10003;Test data is read from the external source and is not part of the test code
