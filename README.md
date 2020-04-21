@@ -14,7 +14,7 @@ This will run the desired test case test case and generate the test report
 <h3>About The Project</h3>
 
 <b>Page Object Model</b> design has been used to create tests. Every view has its own page class which can be found at /src/test/java/pages. The /src/test/java/tests directory contains a <b>BaseClass</b> which is inherited to all the test classes and is responsible for setting up the test session and ending the test session. <b>PurchaseTest</b> class contains the tests relevant for this assignment. All the method names and variable names are very readable and easy to understand. For dependency management I have used Maven.
-The Parameters for the tests are passed via the testng XML file. So any change in the test case. data. can be done in the XML file without touching the code.
+The Parameters for the tests are passed via the testng XML file. The parameters for setting up the environment are passed via the properties file. So any change in the test case data can be done in the external files without touching the code.
 All the assertion statements are part of the test case and no assertion is made in the view pages because that's one of the principles of the POM.
 
 
