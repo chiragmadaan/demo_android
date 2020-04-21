@@ -16,6 +16,18 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
+
+
+/*
+ * This is the Base class for all the future test cases
+ * It loads all the environment parameters from the properties file
+ * The proceeds to creating an appium driver for the testing
+ * This class is to be inherited to all test case class in order to be able to execute the tests 
+ * 
+ * */
+
+
+
 public class BaseClass {
 	
 	AppiumDriver<MobileElement> driver;
