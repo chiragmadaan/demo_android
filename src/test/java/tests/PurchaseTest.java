@@ -11,6 +11,15 @@ import pages.ProductPage;
 import pages.SignInPage;
 import pages.Results;
 
+
+/*
+ * This is test test case that is part of the assignment
+ * i.e. Login, then Search for a TV, then tap on any random result
+ * then verify the product on the details page, followed by checkout
+ * Lastly verify that Cart
+ * 
+ * 
+ * */
 public class PurchaseTest extends BaseClass {
 
 	@Test

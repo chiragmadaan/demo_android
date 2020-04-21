@@ -2,8 +2,7 @@ package pages;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
-
+import helpers.Util;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -11,9 +10,15 @@ import io.appium.java_client.android.AndroidDriver;
 public class CartPage {
 
 	AndroidDriver<MobileElement> driver;
-	String checkout = "sc-mini-buy-box";
-	String cart = "activeCartViewForm";
-	String deleteButton = "a-autoid-2";
+	
+	
+	/*
+	 * Following are the declarations of the locators of the elements of the page 
+	 * */
+	
+	String checkout = "//android.view.View[@resource-id='sc-mini-buy-box']";
+	String cart = "//android.view.View[@resource-id='activeCartViewForm']";
+	String deleteButton = "//android.view.View[@resource-id='a-autoid-2']";
 	
 	
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -24,21 +29,16 @@ public class CartPage {
 	// Returns the name of the item that is present in the cart
 	
 	public String getCartItem() {
-		MobileElement el = driver.findElement(By.xpath("//android.view.View[@resource-id='" + cart + "']"));
-		List<MobileElement> els = el.findElements(By.className("android.view.View"));
+		MobileElement el = Util.elementXpath(cart, driver);
+		List<MobileElement> els = Util.subElementsClassName("android.view.View", el);
 		return els.get(3).getText();
 	}
 	
 	// Removes the item from the cart
 	
 	public void deleteItem() {
-		MobileElement el = driver.findElement(By.xpath("//android.view.View[@resource-id='" + deleteButton + "']"));
-		el.findElementByClassName("android.widget.Button").click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		MobileElement el = Util.elementXpath(deleteButton, driver);
+		Util.subElementClassName("android.widget.Button", el).click();
 	}
 	
 	
@@ -46,7 +46,7 @@ public class CartPage {
 	
 	public boolean isCheckoutButtonPresent() {
 		try{
-			driver.findElement(By.xpath("//android.view.View[@resource-id='" + checkout + "']"));
+			Util.elementXpath(checkout, driver);
 			return true;
 		} catch(Exception e) {
 			return false;

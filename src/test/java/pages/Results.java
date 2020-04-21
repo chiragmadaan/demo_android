@@ -1,11 +1,7 @@
 package pages;
 
 import java.util.List;
-import java.util.Set;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.touch.TouchActions;
-
+import helpers.Util;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -13,7 +9,13 @@ import io.appium.java_client.android.AndroidDriver;
 public class Results {
 
 	AndroidDriver<MobileElement> driver;
-	String searchResults = "search";
+	
+	
+	/*
+	 * Following are the declarations of the locators of the elements of the page 
+	 * */
+	
+	String searchResults = "//android.view.View[@resource-id='search']";
 	
 	public Results(AppiumDriver<MobileElement> driver) {
 		this.driver = (AndroidDriver<MobileElement>) driver;
@@ -24,8 +26,8 @@ public class Results {
 	
 	public String tapOnAResult() {
 		
-		MobileElement el = driver.findElement(By.xpath("//android.view.View[@resource-id='" + searchResults + "']"));
-		List<MobileElement> results = el.findElements(By.className("android.view.View"));
+		MobileElement el = Util.elementXpath(searchResults, driver);
+		List<MobileElement> results = Util.subElementsClassName("android.view.View", el);
 		int rand = (int)(Math.random() * 4);
 		rand = ((rand+1) * 9) - 2;
 		rand  = 17;
